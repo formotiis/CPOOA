@@ -16,11 +16,15 @@ SOURCES += main.cpp\
         console.cpp \
     observable.cpp \
     observer.cpp \
-    cours.cpp
+    cours.cpp \
+    personne.cpp \
+    etudiant.cpp
 
 HEADERS  += console.h \
     observable.h \
     observer.h \
-    cours.h
+    cours.h \
+    personne.h \
+    etudiant.h
 
 FORMS    += console.ui

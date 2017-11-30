@@ -12,7 +12,7 @@ public:
     virtual ~Observer();
     /// @brief Fonction servant de mise à jour pour l'Observable
     ///        à définir avant utilisation !
-    virtual void update() = 0;
+    virtual void update();
 
 };
 
