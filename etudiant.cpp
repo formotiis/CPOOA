@@ -1,17 +1,12 @@
 #include "etudiant.h"
 
-Etudiant::Etudiant()
-{
-}
-
 /// @brief Constucteur de la classe Etudiant
 ///
 /// @param i String contenant l'identifiant.
 ///
 /// @param m String contenant le mot de passe.
 ///
-Etudiant::Etudiant(std::str i, std::str m){
-    super(i,m);
+Etudiant::Etudiant(std::string i, std::string m):Personne(i,m){
 }
 
 
@@ -19,6 +14,6 @@ Etudiant::Etudiant(std::str i, std::str m){
 ///
 /// @return Un string contenant Etudiant
 ///
-std::str Personne::getType(){
+std::string Personne::getType(){
     return "Etudiant";
 }

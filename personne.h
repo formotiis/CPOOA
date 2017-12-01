@@ -1,5 +1,6 @@
 #ifndef PERSONNE_H
 #define PERSONNE_H
+#include <string>
 
 class Personne
 {
@@ -10,17 +11,13 @@ public:
     ///
     /// @param m String contenant le mot de passe.
     ///
-    void connexion(std::str i, std::str m);
+    void connexion(std::string i, std::string m);
 
     /// @brief Fonction de type d'utilisateur retourne le
     ///         type d'utilisateur à qui correspond cette personne.
     /// @return Une chaine de caracterères correspondant au
     ///         type de personne.
-    std::str getType();
-protected:
-    /// @brief Constructeur par défaut ne fait rien.
-    ///
-    Personne();
+    virtual std::string getType() = 0;
 
     /// @brief Constructeur principal
     ///
@@ -28,17 +25,19 @@ protected:
     ///
     /// @param m String contenant le mot de passe.
     ///
-    Personne(std::str i, std::str m);
-private:
+    Personne(std::string i = "login", std::string m = "psswd");
+
     /// @brief Le destructeur ne fait rien, mais doit être défini
     ///        comme abstrait.
-    virtual ~Personne();
+    virtual ~Personne() =0;
+
+private:
 
     /// @brief String contenant l'identifiant de la personne.
-    std::str identifiant;
+    std::string identifiant;
 
     /// @brief String contenant le mot de passe de la personne.
-    std::str motDePasse;
+    std::string motDePasse;
 };
 
 #endif // PERSONNE_H

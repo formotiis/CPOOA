@@ -1,21 +1,21 @@
-#ifndef ETUDIANT_H
-#define ETUDIANT_H
+#ifndef ADMIN_H
+#define ADMIN_H
 #include "personne.h"
 
-class Etudiant : public Personne
+class Admin: public Personne
 {
 public:
 
-    /// @brief Constucteur de la classe Etudiant
+    /// @brief Constucteur de la classe Admin
     ///
     /// @param i String contenant l'identifiant.
     ///
     /// @param m String contenant le mot de passe.
     ///
-    Etudiant(std::string i, std::string m);
+    Admin(std::string i, std::string m);
 
     ///destructeur
-    ~Etudiant() = default;
+    ~Admin() = default;
 
     std::string getType();
 
@@ -27,5 +27,4 @@ public:
     ///
     void connexion(std::string i, std::string m);
 };
-
-#endif // ETUDIANT_H
+#endif
