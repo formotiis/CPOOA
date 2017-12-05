@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <iostream>
+#include "insider.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -27,6 +28,8 @@ void MainWindow::on_connexionButton_clicked()
         QString str = QString::fromUtf8(temp.c_str());
         qmb.setText(str);
         qmb.exec();
+        //InsiderUI iui = InsiderUI(mod);
+        //iui.show();
     }
 }
 

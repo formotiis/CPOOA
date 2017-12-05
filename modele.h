@@ -62,7 +62,7 @@ public:
     ///
     Personne* getConnect();
 private:
-    ///personne connecté actuellement
+    /// @brief personne connecté actuellement
     Personne* personneConnecte;
     std::vector<Personne*> listeUtilisateur;
 };

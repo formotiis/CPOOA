@@ -218,9 +218,14 @@
       <string>Mot de Passe :</string>
      </property>
     </widget>
+    <zorder>connexionIdentifiant</zorder>
+    <zorder>connexionMDP</zorder>
+    <zorder>connexionButton</zorder>
+    <zorder>label_2</zorder>
+    <zorder>label</zorder>
+    <zorder>widget</zorder>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
