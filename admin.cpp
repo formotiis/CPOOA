@@ -1,8 +1,9 @@
 #include "admin.h"
 
-Admin::Admin(std::string i, std::string m):Personne(i,m){
+Admin::Admin(std::string identifiant, std::string password):Personne(identifiant,password)
+{
 }
 
-std::string getType(){
+std::string Admin::getType(){
     return "Admin";
 }

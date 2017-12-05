@@ -1,31 +1,24 @@
 #ifndef ETUDIANT_H
 #define ETUDIANT_H
-#include "personne.h"
+#include "Personne.h"
 
 class Etudiant : public Personne
 {
 public:
-
-    /// @brief Constucteur de la classe Etudiant
-    ///
-    /// @param i String contenant l'identifiant.
-    ///
-    /// @param m String contenant le mot de passe.
-    ///
-    Etudiant(std::string i, std::string m);
-
-    ///destructeur
     ~Etudiant() = default;
 
-    std::string getType();
+    ///
+    /// \brief Constructeur d'enseignant, se basant sur celui de Personne
+    /// \param identifiant
+    /// \param password
+    ///
+    Etudiant(std::string identifiant,std::string password);
 
-    /// @brief Fonction de connextion Sert à identifier l'utilisateur
-    ///         i avec son mot de passe m associé.
-    /// @param i String contenant l'identifiant.
     ///
-    /// @param m String contenant le mot de passe.
+    /// \brief getType
+    /// \return uen chaine de caractère identifiant la classe
     ///
-    void connexion(std::string i, std::string m);
+    std::string getType();
 };
 
 #endif // ETUDIANT_H

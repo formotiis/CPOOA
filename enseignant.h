@@ -1,19 +1,18 @@
-#ifndef ADMIN_H
-#define ADMIN_H
+#ifndef ENSEIGNANT_H
+#define ENSEIGNANT_H
 #include "Personne.h"
 
-class Admin : public Personne
+class Enseignant : public Personne
 {
 public:
-
-    ~Admin() = default;
+    ~Enseignant() = default;
 
     ///
-    /// \brief Constructeur de Admin
+    /// \brief Constructeur de Enseignant
     /// \param identifiant
     /// \param password
     ///
-    Admin(std::string identifiant,std::string password);
+    Enseignant(std::string identifiant, std::string password);
 
     ///
     /// \brief getType
@@ -22,4 +21,4 @@ public:
     std::string getType();
 };
 
-#endif // ADMIN_H
+#endif // ENSEIGNANT_H
