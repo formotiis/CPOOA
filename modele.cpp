@@ -17,9 +17,9 @@ Modele::Modele()
             if(taille >= 3){
                 if(varSplit.at(2).compare("Etudiant") == 0)
                         util = new Etudiant(varSplit.at(0),varSplit.at(1));
-                if(varSplit.at(2).compare("Admin"))
+                if(varSplit.at(2).compare("Admin") == 0)
                         util = new Admin(varSplit.at(0),varSplit.at(1));
-                if(varSplit.at(2).compare("Enseignant"))
+                if(varSplit.at(2).compare("Enseignant") ==0)
                         util = new Enseignant(varSplit.at(0),varSplit.at(1));
                 listeUtilisateur.push_back(util);
             }

@@ -1,6 +1,6 @@
 #ifndef ADMIN_H
 #define ADMIN_H
-#include "Personne.h"
+#include "personne.h"
 
 class Admin : public Personne
 {

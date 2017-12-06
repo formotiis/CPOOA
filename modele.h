@@ -2,11 +2,11 @@
 #define MODELE_H
 #include <string>
 #include <fstream>
-#include "Personne.h"
+#include "personne.h"
 #include <vector>
-#include "Etudiant.h"
-#include "Admin.h"
-#include "Enseignant.h"
+#include "etudiant.h"
+#include "admin.h"
+#include "enseignant.h"
 #include <iostream>
 #include <QDir>
 #include <QMessageBox>
