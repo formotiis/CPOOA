@@ -13,8 +13,3 @@ std::string Personne::getMDP(){
 std::string Personne::getPseudo(){
     return pseudo;
 }
-
-void Personne::deconnexion(){
-    pseudo.clear();
-    motDePasse.clear();
-}

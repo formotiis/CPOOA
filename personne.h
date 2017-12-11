@@ -24,7 +24,6 @@ public:
 
     std::string getMDP();
     std::string getPseudo();
-    void deconnexion();
 
 private:
     std::string pseudo;

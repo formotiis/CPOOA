@@ -1,4 +1,4 @@
 
 tome tome Etudiant
 lala lala Etudiant
-tata tata Etudiant
+tata tata Enseignant

@@ -16,6 +16,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     Modele* mod;
     ~MainWindow();
+    void connect();
 
 private slots:
     void on_connexionButton_clicked();

@@ -61,6 +61,8 @@ public:
     /// \return
     ///
     Personne* getConnect();
+
+    void deconnecter();
 private:
     /// @brief personne connecté actuellement
     Personne* personneConnecte;

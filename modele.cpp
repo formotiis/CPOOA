@@ -91,3 +91,7 @@ void Modele::inscription(std::string identifiant, std::string password){
 Personne* Modele::getConnect(){
     return personneConnecte;
 }
+
+void Modele::deconnecter(){
+    personneConnecte = NULL;
+}

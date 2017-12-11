@@ -31,7 +31,10 @@ SOURCES += \
     admin.cpp \
     enseignant.cpp \
     modele.cpp \
-    cours.cpp
+    cours.cpp \
+    menuenseignant.cpp \
+    formcreacours.cpp \
+    menuacceptcours.cpp
 HEADERS += \
         mainwindow.h \
     personne.h \
@@ -39,10 +42,16 @@ HEADERS += \
     admin.h \
     enseignant.h \
     modele.h \
-    cours.h
+    cours.h \
+    menuenseignant.h \
+    formcreacours.h \
+    menuacceptcours.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    menuenseignant.ui \
+    formcreacours.ui \
+    menuacceptcours.ui
 
 DISTFILES += \
     membres.txt
