@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLineEdit" name="f_nhcours">
+  <widget class="QLineEdit" name="f_nhCours">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -101,6 +101,19 @@
      <width>451</width>
      <height>391</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="b_cancel">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>380</y>
+     <width>99</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Annuler</string>
    </property>
   </widget>
  </widget>
