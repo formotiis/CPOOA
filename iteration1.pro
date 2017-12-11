@@ -31,8 +31,7 @@ SOURCES += \
     admin.cpp \
     enseignant.cpp \
     modele.cpp \
-    accueil.cpp
-
+    cours.cpp
 HEADERS += \
         mainwindow.h \
     personne.h \
@@ -40,7 +39,7 @@ HEADERS += \
     admin.h \
     enseignant.h \
     modele.h \
-    accueil.h
+    cours.h
 
 FORMS += \
         mainwindow.ui

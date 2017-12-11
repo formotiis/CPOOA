@@ -22,8 +22,6 @@ private slots:
 
     void on_inscripButton_clicked();
 
-    void on_pageConnexion_customContextMenuRequested(const QPoint &pos);
-
 private:
     Ui::MainWindow *ui;
 };
