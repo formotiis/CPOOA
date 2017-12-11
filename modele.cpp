@@ -88,6 +88,20 @@ void Modele::inscription(std::string identifiant, std::string password){
     }
 }
 
+/*
+void Modele::creaCours(std::string c, int nb_heures, int nb_places, int desc ){
+    if(true){
+        std::ofstream fichier("./cours.txt",std::ios::app);
+        //new Cours(c,desc, nb_heures, nb_places);
+        fichier << ("\n"+c+"£"+nb_heures + "£" + nb_places + "£" +desc +"£"+false+"£" +" "+"£"+" ");
+        fichier.close();
+        QMessageBox qmb;
+        qmb.setText("Creation du cours réussie");
+        qmb.exec();
+    }
+}
+*/
+
 Personne* Modele::getConnect(){
     return personneConnecte;
 }
