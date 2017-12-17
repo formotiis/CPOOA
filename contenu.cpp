@@ -86,3 +86,8 @@ void Contenu::on_b_acccours_2_clicked()
 {
     setCurrentWidget(widget(varAccepterCour));
 }
+
+void Contenu::on_b_cancel_2_clicked()
+{
+    setCurrentWidget(widget(varMenuAdmin));
+}

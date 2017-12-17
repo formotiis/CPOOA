@@ -22,6 +22,12 @@ public:
     /// \return une chaine de caractère identifiant la classe
     ///
     std::string getType();
+
+    /**
+     * @brief ajoutCoursAttente : ajout un cour en attente dans la liste des cours en attente
+     * @param c
+     */
+    void ajoutCoursAttente(Cours* c);
 private:
     /**
      * @brief listeCours : lsite des cours non validé

@@ -29,3 +29,7 @@ std::vector<std::string> Admin::split(const std::string &text, char sep) {
 std::string Admin::getType(){
     return "Admin";
 }
+
+void Admin::ajoutCoursAttente(Cours* c){
+    listeCoursAttente.push_back(c);
+}

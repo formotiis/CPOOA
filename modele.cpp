@@ -95,6 +95,10 @@ void Modele::creaCours(std::string titre, std::string nb_heures, std::string nb_
     QMessageBox qmb;
     qmb.setText("Creation du cours réussie");
     qmb.exec();
+    for(int i =0; i<listeUtilisateur.size();i++){
+        if(listeUtilisateur.at(i)->getType() == "Admin")
+            dynamic_cast<Admin*>(listeUtilisateur.at(i))->ajoutCoursAttente(new Cours(titre,nb_heures,nb_places,desc,listeUtilisateur.at(i)->getPseudo()));
+    }
 }
 
 Personne* Modele::getConnect(){
