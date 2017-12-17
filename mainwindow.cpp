@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <iostream>
-#include "menuenseignant.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -9,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     mod = new Modele();
+    setCentralWidget(new Contenu(this));
+    dynamic_cast<QStackedWidget*>(centralWidget())->setCurrentWidget(dynamic_cast<QStackedWidget*>(centralWidget())->widget(0));
 }
 
 MainWindow::~MainWindow()
@@ -21,8 +22,9 @@ void MainWindow::on_connexionButton_clicked()
     std::string pass = MainWindow::findChild<QLineEdit*>("connexionMDP")->text().toStdString();
     std::string ident = MainWindow::findChild<QLineEdit*>("connexionIdentifiant")->text().toStdString();
     if(mod->connexion(ident, pass)){
-        if(mod->getConnect()->getType() == "Enseignant")
-            setCentralWidget(new MenuEnseignant(this, mod));
+        if(mod->getConnect()->getType() == "Enseignant"){
+            std::cout << "aaaaaaaaa" << std::endl;//dynamic_cast<QStackedWidget*>(centralWidget())->setCurrentWidget(dynamic_cast<QStackedWidget*>(centralWidget())->widget(1));
+        }
     }
 }
 
@@ -33,6 +35,10 @@ void MainWindow::on_inscripButton_clicked()
     mod->inscription(ident,pass);
 }
 
-void MainWindow::connect(){
-    //setCentralWidget();
+void MainWindow::connecter(std::string ident, std::string pass){
+    if(mod->connexion(ident, pass)){
+        if(mod->getConnect()->getType() == "Enseignant"){
+            dynamic_cast<QStackedWidget*>(centralWidget())->setCurrentWidget(dynamic_cast<QStackedWidget*>(centralWidget())->widget(1));
+        }
+    }
 }
