@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     mod = new Modele();
     setCentralWidget(new Contenu(this));
-    dynamic_cast<QStackedWidget*>(centralWidget())->setCurrentWidget(dynamic_cast<QStackedWidget*>(centralWidget())->widget(0));
+    dynamic_cast<QStackedWidget*>(centralWidget())->setCurrentWidget(dynamic_cast<QStackedWidget*>(centralWidget())->widget(varConnexion));
 }
 
 MainWindow::~MainWindow()
@@ -17,28 +17,25 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_connexionButton_clicked()
-{
-    std::string pass = MainWindow::findChild<QLineEdit*>("connexionMDP")->text().toStdString();
-    std::string ident = MainWindow::findChild<QLineEdit*>("connexionIdentifiant")->text().toStdString();
-    if(mod->connexion(ident, pass)){
-        if(mod->getConnect()->getType() == "Enseignant"){
-            std::cout << "aaaaaaaaa" << std::endl;//dynamic_cast<QStackedWidget*>(centralWidget())->setCurrentWidget(dynamic_cast<QStackedWidget*>(centralWidget())->widget(1));
-        }
-    }
-}
-
-void MainWindow::on_inscripButton_clicked()
-{
-    std::string pass = MainWindow::findChild<QLineEdit*>("inscripMDP")->text().toStdString();
-    std::string ident = MainWindow::findChild<QLineEdit*>("inscripIdentifiant")->text().toStdString();
-    mod->inscription(ident,pass);
-}
-
 void MainWindow::connecter(std::string ident, std::string pass){
     if(mod->connexion(ident, pass)){
         if(mod->getConnect()->getType() == "Enseignant"){
-            dynamic_cast<QStackedWidget*>(centralWidget())->setCurrentWidget(dynamic_cast<QStackedWidget*>(centralWidget())->widget(1));
+            dynamic_cast<QStackedWidget*>(centralWidget())->setCurrentWidget(dynamic_cast<QStackedWidget*>(centralWidget())->widget(varMenuEnseignant));
+        }
+        if(mod->getConnect()->getType() == "Etudiant"){
+            dynamic_cast<QStackedWidget*>(centralWidget())->setCurrentWidget(dynamic_cast<QStackedWidget*>(centralWidget())->widget(varMenuEtu));
+        }
+        if(mod->getConnect()->getType() == "Admin"){
+            dynamic_cast<QStackedWidget*>(centralWidget())->setCurrentWidget(dynamic_cast<QStackedWidget*>(centralWidget())->widget(varMenuAdmin));
         }
     }
+}
+
+void MainWindow::inscription(std::string ident, std::string pass){
+    mod->inscription(ident,pass);
+}
+
+void MainWindow::deconnexion(){
+    mod->deconnexion();
+    dynamic_cast<QStackedWidget*>(centralWidget())->setCurrentWidget(dynamic_cast<QStackedWidget*>(centralWidget())->widget(varConnexion));
 }

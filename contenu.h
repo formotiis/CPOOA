@@ -19,6 +19,14 @@ public:
 private slots:
     void on_connexionButton_clicked();
 
+    void on_inscripButton_clicked();
+
+    void on_b_deco_2_clicked();
+
+    void on_b_deco_3_clicked();
+
+    void on_b_deco_clicked();
+
 private:
     Ui::Contenu *ui;
 };

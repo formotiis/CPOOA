@@ -18,14 +18,18 @@ public:
     Modele* mod;
     ~MainWindow();
     void connecter(std::string ident, std::string pass);
+    void inscription(std::string ident, std::string pass);
+    void deconnexion();
 
 private slots:
-    void on_connexionButton_clicked();
-
-    void on_inscripButton_clicked();
 
 private:
     Ui::MainWindow *ui;
+    //numéro des widgets
+    const int varConnexion = 0;
+    const int varMenuAdmin = 1;
+    const int varMenuEtu = 2;
+    const int varMenuEnseignant = 3;
 };
 
 #endif // MAINWINDOW_H
