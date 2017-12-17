@@ -27,8 +27,18 @@ private slots:
 
     void on_b_deco_clicked();
 
+    void on_b_addcours_clicked();
+
+    void on_b_cancel_clicked();
+
 private:
     Ui::Contenu *ui;
+    //numéro des widgets
+    const int varConnexion = 0;
+    const int varMenuAdmin = 1;
+    const int varMenuEtu = 2;
+    const int varMenuEnseignant = 3;
+    const int varAjoutCour = 4;
 };
 
 #endif // CONTENU_H

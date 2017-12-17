@@ -37,5 +37,4 @@ void MainWindow::inscription(std::string ident, std::string pass){
 
 void MainWindow::deconnexion(){
     mod->deconnexion();
-    dynamic_cast<QStackedWidget*>(centralWidget())->setCurrentWidget(dynamic_cast<QStackedWidget*>(centralWidget())->widget(varConnexion));
 }

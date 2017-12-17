@@ -29,15 +29,25 @@ void Contenu::on_inscripButton_clicked()
 
 void Contenu::on_b_deco_2_clicked()
 {
-    dynamic_cast<MainWindow*>(parent())->deconnexion();
+    setCurrentWidget(widget(varConnexion));
 }
 
 void Contenu::on_b_deco_3_clicked()
 {
-    dynamic_cast<MainWindow*>(parent())->deconnexion();
+    setCurrentWidget(widget(varConnexion));
 }
 
 void Contenu::on_b_deco_clicked()
 {
-    dynamic_cast<MainWindow*>(parent())->deconnexion();
+    setCurrentWidget(widget(varConnexion));
+}
+
+void Contenu::on_b_addcours_clicked()
+{
+    setCurrentWidget(widget(varAjoutCour));
+}
+
+void Contenu::on_b_cancel_clicked()
+{
+    setCurrentWidget(widget(varMenuEnseignant));
 }
