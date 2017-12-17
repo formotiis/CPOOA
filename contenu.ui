@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1024</width>
-    <height>417</height>
+    <height>419</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -724,16 +724,6 @@ administrateur pour approbation</string>
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="f_desc">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>20</y>
-      <width>451</width>
-      <height>391</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_15">
     <property name="geometry">
      <rect>
@@ -802,6 +792,52 @@ administrateur pour approbation</string>
     </property>
     <property name="text">
      <string>Nombre d'heures du cours :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b_creaCour">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>380</y>
+      <width>111</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Accepter</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="f_desc">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>10</y>
+      <width>451</width>
+      <height>391</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="f_titreCour">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>240</y>
+      <width>113</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_30">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>250</y>
+      <width>211</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Intitulé du cour :</string>
     </property>
    </widget>
   </widget>

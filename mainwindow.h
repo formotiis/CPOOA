@@ -17,9 +17,6 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     Modele* mod;
     ~MainWindow();
-    void connecter(std::string ident, std::string pass);
-    void inscription(std::string ident, std::string pass);
-    void deconnexion();
 
 private slots:
 

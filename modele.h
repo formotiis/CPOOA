@@ -62,7 +62,20 @@ public:
     ///
     Personne* getConnect();
 
+    /**
+     * @brief deconnection de l'utilisateur
+     */
     void deconnecter();
+
+    /**
+     * crée un cour, l'écrit dans un fichier
+     * @brief creaCours
+     * @param titre
+     * @param nb_heures
+     * @param nb_places
+     * @param desc
+     */
+    void creaCours(std::string titre, std::string nb_heures, std::string nb_places, std::string desc );
 private:
     /// @brief personne connecté actuellement
     Personne* personneConnecte;
