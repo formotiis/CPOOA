@@ -81,3 +81,8 @@ void Contenu::on_b_creaCour_clicked()
         QStackedWidget::findChild<QPlainTextEdit*>("f_desc")->setPlainText("");
     }
 }
+
+void Contenu::on_b_acccours_2_clicked()
+{
+    setCurrentWidget(widget(varAccepterCour));
+}

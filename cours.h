@@ -6,15 +6,16 @@ class Cours
 {
 
 public:
-    Cours(std::string c,std::string desc, int nbHeures, int nbPlaces);
+    Cours(std::string t,std::string nbHeures, std::string nbPlaces, std::string desc, std::string createur);
     ~Cours() = default;
 
 private:
     std::string description;
     std::string dateDebutInscription;
     std::string dateFinInscriptions;
-    int nombreHeures;
-    int nombrePlaces;
+    std::string titre;
+    std::string nombreHeures;
+    std::string nombrePlaces;
     bool enAttente;
     std::string createur;
 };

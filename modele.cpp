@@ -89,8 +89,8 @@ void Modele::inscription(std::string identifiant, std::string password){
 }
 
 void Modele::creaCours(std::string titre, std::string nb_heures, std::string nb_places, std::string desc ){
-    std::ofstream fichier("./cours.txt",std::ios::app);
-    fichier << ("\n"+titre+"£"+nb_heures + "£" + nb_places + "£" +desc +"£false£");
+    std::ofstream fichier("./coursEnAttente.txt",std::ios::app);
+    fichier << (titre+"#"+nb_heures + "#" + nb_places + "#" +desc +"#"+getConnect()->getPseudo()+"\n");
     fichier.close();
     QMessageBox qmb;
     qmb.setText("Creation du cours réussie");

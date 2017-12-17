@@ -1,6 +1,8 @@
 #ifndef PERSONNE_H
 #define PERSONNE_H
 #include <string>
+#include <vector>
+#include "cours.h"
 
 class Personne
 {

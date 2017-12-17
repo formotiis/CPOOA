@@ -57,6 +57,8 @@ private slots:
      */
     void on_b_creaCour_clicked();
 
+    void on_b_acccours_2_clicked();
+
 private:
     Ui::Contenu *ui;
     Modele* mod;
@@ -66,6 +68,7 @@ private:
     const int varMenuEtu = 2;
     const int varMenuEnseignant = 3;
     const int varAjoutCour = 4;
+    const int varAccepterCour = 5;
 };
 
 #endif // CONTENU_H

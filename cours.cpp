@@ -1,11 +1,12 @@
 #include "cours.h"
 
-Cours::Cours(std::string c,std::string desc, int nbHeures, int nbPlaces)
+Cours::Cours(std::string t,std::string nbHeures, std::string nbPlaces, std::string desc, std::string createur)
 {
+    titre = t;
     description = desc;
     nombreHeures = nbHeures;
     nombrePlaces = nbPlaces;
     dateDebutInscription ="";
     dateFinInscriptions ="";
-    createur = c;
+    createur = createur;
 }
