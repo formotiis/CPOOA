@@ -3,6 +3,7 @@
 
 #include <QStackedWidget>
 #include "mainwindow.h"
+#include <iostream>
 
 namespace Ui {
 class Contenu;

@@ -10,3 +10,7 @@ Cours::Cours(std::string t,std::string nbHeures, std::string nbPlaces, std::stri
     dateFinInscriptions ="";
     createur = createur;
 }
+
+std::string Cours::getTitre(){
+    return titre;
+}

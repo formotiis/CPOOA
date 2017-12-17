@@ -33,3 +33,7 @@ std::string Admin::getType(){
 void Admin::ajoutCoursAttente(Cours* c){
     listeCoursAttente.push_back(c);
 }
+
+std::vector<Cours*> Admin::getListeCoursAttente(){
+    return listeCoursAttente;
+}

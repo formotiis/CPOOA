@@ -26,7 +26,12 @@ void Contenu::on_connexionButton_clicked()
             setCurrentWidget(widget(varMenuEtu));
         }
         if(mod->getConnect()->getType() == "Admin"){
+            findChild<QComboBox*>("cb_l_cours")->clear();
             setCurrentWidget(widget(varMenuAdmin));
+            QStringList* temp = new QStringList();
+            for(int i = 0;i < dynamic_cast<Admin*>(mod->getConnect())->getListeCoursAttente().size();i++)
+                temp->append(QString::fromStdString(dynamic_cast<Admin*>(mod->getConnect())->getListeCoursAttente().at(i)->getTitre()));
+            findChild<QComboBox*>("cb_l_cours")->addItems(*temp);
         }
     }
 }

@@ -8,6 +8,7 @@ class Cours
 public:
     Cours(std::string t,std::string nbHeures, std::string nbPlaces, std::string desc, std::string createur);
     ~Cours() = default;
+    std::string getTitre();
 
 private:
     std::string description;

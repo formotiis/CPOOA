@@ -28,6 +28,8 @@ public:
      * @param c
      */
     void ajoutCoursAttente(Cours* c);
+
+    std::vector<Cours*> getListeCoursAttente();
 private:
     /**
      * @brief listeCours : lsite des cours non validé
